@@ -1,5 +1,7 @@
-<%= form_for @message, { :controller => 'messages', :action => 'create', :remote => 'true' } do |f| %>
-	<%= f.text_field :message %>
-	<%= f.submit "Send" %>
+<div class="message-form">
+	<%= form_for @message, { :controller => 'messages', :action => 'create', :remote => 'true' } do |f| %>
+		<%= f.text_field :message %>
+		<%= f.submit "Send" %>
 
-<% end %>
+	<% end %>
+</div>

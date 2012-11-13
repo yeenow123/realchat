@@ -12,3 +12,4 @@ function updateMessages() {
 	setTimeout(updateMessages, 5000);
 }
 
+

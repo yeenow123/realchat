@@ -1,1 +1,1 @@
-$(".message:last").append("<%= escape_javascript (render @messages) %>");
+$(".message:last").after("<%= escape_javascript (render @messages) %>").hide().slideDown('slow');
