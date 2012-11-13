@@ -1,8 +1,8 @@
-<ul class="chat">
+<div class="chat">
+	<%= render @messages %>
+<div>
 
-<ul>
-
-<%= form_for @message, { :controller => 'messages', :action => 'create' } do |f| %>
+<%= form_for @message, { :controller => 'messages', :action => 'create', :remote => 'true' } do |f| %>
 	<%= f.text_field :message %>
 	<%= f.submit "Send" %>
 
