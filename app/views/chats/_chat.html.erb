@@ -2,10 +2,6 @@
 	<%= render @messages %>
 <div>
 
-<%= form_for @message, { :controller => 'messages', :action => 'create', :remote => 'true' } do |f| %>
-	<%= f.text_field :message %>
-	<%= f.submit "Send" %>
-
-<% end %>
+<%= render '/messages/message_form' %>
 
 <%= link_to "Sign Out", signout_path, :controller => 'sessions', :method => 'delete' %>

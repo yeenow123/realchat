@@ -3,8 +3,7 @@ class MessagesController < ApplicationController
 		@user = current_user
 		@message = @user.messages.new(params[:message])
 		
-		@message.save			
-
+		@message.save
 	end
 
 	def index
