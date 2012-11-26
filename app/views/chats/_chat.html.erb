@@ -1,7 +1,5 @@
 <div class="chat">
 	<%= render @messages %>
-<div>
+</div>
 
 <%= render '/messages/message_form' %>
-
-<%= link_to "Sign Out", signout_path, :controller => 'sessions', :method => 'delete' %>

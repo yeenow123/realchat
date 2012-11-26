@@ -1,5 +1,7 @@
 class UsersController < ApplicationController
 
+	before_filter :correct_user, only: [:show]
+
 	def new
 		@user = User.new
 	end
@@ -21,5 +23,12 @@ class UsersController < ApplicationController
 		@messages = Message.where('created_at > ?', Time.at(params[:after].to_i))
 	end
 
+	private
 
+	def correct_user
+		@user = User.find(params[:id])
+		unless current_user?(@user)
+			redirect_to signin_path
+		end
+	end
 end
