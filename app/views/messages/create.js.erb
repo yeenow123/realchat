@@ -1,0 +1,3 @@
+<% broadcast "/messages/create" do %>
+$(".message:last").after("<%= escape_javascript (render @message) %>")
+<% end %>

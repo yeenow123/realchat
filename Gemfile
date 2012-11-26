@@ -22,7 +22,6 @@ end
 
 gem 'jquery-rails'
 gem 'rspec'
-gem 'therubyracer'
 gem 'faye'
 gem 'thin'
 

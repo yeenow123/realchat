@@ -16,7 +16,8 @@
 
 $(function() {
 	var faye = new Faye.Client('http://localhost:9292/faye'); //Will need to change URL when going into production
-	faye.subscribe('/messages/new', function (data) {
+
+	faye.subscribe('/messages/create', function (data) {
 		eval(data);
 	});
 })

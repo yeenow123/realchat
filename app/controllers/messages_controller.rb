@@ -6,7 +6,4 @@ class MessagesController < ApplicationController
 		@message.save
 	end
 
-	def index
-		@messages = Message.where('created_at > ?', Time.at(params[:after].to_i + 1))
-	end
 end
