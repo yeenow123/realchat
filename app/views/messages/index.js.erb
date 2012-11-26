@@ -1,1 +1,3 @@
-$(".message:last").after("<%= escape_javascript (render @messages) %>").hide().slideDown('slow');
+<% broadcast "/messages/new" do %>
+$(".message:last").after("<%= escape_javascript (render @messages) %>")
+<% end %>

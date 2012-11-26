@@ -13,3 +13,10 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+
+$(function() {
+	var faye = new Faye.Client('http://localhost:9292/faye'); //Will need to change URL when going into production
+	faye.subscribe('/messages/new', function (data) {
+		eval(data);
+	});
+})
