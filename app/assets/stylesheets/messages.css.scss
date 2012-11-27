@@ -3,8 +3,29 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .message-form {
-	margin: auto;
+	margin: 0;
 	width: 500px;
+
+	#message_message {
+		padding: 5px;
+		width: 80%;
+		margin-top: 10px;
+		border-radius: 3px;
+		border: 1px solid;
+		background-color: #CEEEFA;
+	}
+
+	input[type="submit"] {
+		margin-left: 10px;
+		padding: 5px;
+		border-color: #000000;
+		border-radius: 10px;
+
+		&:hover {
+			cursor: hand;
+			cursor: pointer;
+		}
+	}
 }
 
 .message {
@@ -15,6 +36,7 @@
 	margin: 0 10px 10px 0;
 	height: auto;
 }
+
 
 .messagesender {
 	font-size: 13px;

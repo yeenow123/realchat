@@ -32,12 +32,5 @@ $(function() {
 		lastmsg.effect('highlight', {}, 3000);
 	});
 
-	subscription.callback(function() {
-		alert("You are now subscribed");
-	})
-
-	
-
-
 })
 
