@@ -19,8 +19,6 @@ class UsersController < ApplicationController
 
 	def show
 		@user = current_user
-		@message = Message.new
-		@messages = Message.where('created_at > ?', Time.at(params[:after].to_i))
 	end
 
 	private

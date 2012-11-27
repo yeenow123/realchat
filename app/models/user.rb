@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-	has_and_belongs_to_many :chats
+	has_many :chats, :through => :chats_users
 	has_many :messages
 
 	before_save :create_remember_token

@@ -1,4 +1,4 @@
 class Chat < ActiveRecord::Base
-	has_and_belongs_to_many :users
+	has_many :users, :through => :chats_users
 	has_many :messages
 end

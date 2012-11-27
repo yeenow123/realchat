@@ -1,6 +1,5 @@
 <% if signed_in? %>
 
-	<%= render 'chats/chat', :object => @message %>
 	<%= link_to "Start Chat", chats_path, :controller => 'chats', :method => 'post' %>
 	<%= link_to "Sign Out", signout_path, :controller => 'sessions', :method => 'delete' %>
 
