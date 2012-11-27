@@ -4,6 +4,8 @@ Realchat::Application.routes.draw do
 
   resources :messages
 
+  resources :chats
+
   resources :sessions, only: [:new, :create, :destroy]
 
 
