@@ -5,6 +5,10 @@ class User < ActiveRecord::Base
 
 	before_save :create_remember_token
 
+	def enter(chat)
+		self.chat_sessions.create(chat_id: chat.id)
+	end
+
 	private
 
 	def create_remember_token

@@ -26,6 +26,7 @@ gem 'rspec'
 gem 'therubyracer', :platform => :ruby
 gem 'faye'
 gem 'thin'
+gem 'execjs'
 
 
 # To use ActiveModel has_secure_password
